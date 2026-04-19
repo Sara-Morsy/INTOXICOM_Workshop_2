@@ -12,39 +12,64 @@ authors:
   - name: Meike&nbsp;Bünger
     affiliation: 2
     orcid: 0009-0002-7664-0058
-  - name: Thomas&nbsp;Exner
+  - name: Robin&nbsp;Durník
     affiliation: 3
+    orcid: 
+  - name: Thomas&nbsp;Exner
+    affiliation: 4
     orcid: 0000-0002-1849-5246
+  - name: Alessio&nbsp;Gamba
+    affiliation: 5
   - name: Jente&nbsp;Houweling
-    affiliation: 4, 5
+    affiliation: 6, 7
     orcid: 0009-0005-3680-0645
   - name: Danyel&nbsp;Jennen
-    affiliation: 5
+    affiliation: 7
+    orcid: 0000-0002-8618-2487
+  - name: Kryštof&nbsp;Komanec
+    affiliation: 8
+    orcid: 0000-0003-3856-1682
   - name: Iseult&nbsp;Lynch
-    affiliation: 6
+    affiliation: 9
     orcid: 0000-0003-4250-4584
+  - name: Rob&nbsp;Stierum
+    affiliation: 10
+    orcid: 0000-0002-4409-1974
   - name: Marvin&nbsp;Martens
-    affiliation: 5
+    affiliation: 7
     orcid: 0000-0003-2230-0840
   - name: Egon&nbsp;Willighagen
-    affiliation: 5
+    affiliation: 7
     orcid: 0000-0001-7542-0286
 affiliations:
   - name: FIZ Karlsruhe – Leibniz Institute for Information Infrastructure, Eggenstein-Leopoldshafen, DE
     index: 1
+    ror: 0387prb75
   - name: Stichting Health-RI, Utrecht, NL
     index: 2
-  - name: Seven Past Nine GmbH, Schopfheim, DE
+    ror: 02xcmp898
+  - name: RECETOX, Faculty of Science, Masaryk University, Brno, CZ
     index: 3
-    ror: 023dg6y22
-  - name: RIVM, Bilthoven, Netherlands, NL
+    ror: 032hzqh22
+  - name: Seven Past Nine GmbH, Schopfheim, DE
     index: 4
+    ror: 023dg6y22
+  - name: Liverpool John Moores University
+    index: 5
+  - name: RIVM, Bilthoven, Netherlands, NL
+    index: 6
     ror: 01cesdt21
   - name: Dept of Translational Genomics, Maastricht University, Maastricht, NL
-    index: 5
+    index: 7
     ror: 02jz4aj89
+  - name: Faculty of Information Technology, Czech Technical University in Prague, Praha, CZ
+    index: 8
+    ror: 03kqpb082
   - name: University of Birmingham, Birmingham, UK
-    index: 6
+    index: 9
+    ror: 03angcq70
+  - name: The Netherlands Organisation for Applied Scientific Research (TNO), Utrecht, NL
+    index: 10
     ror: 03angcq70
 date: 1 December 2024
 cito-bibliography: paper.bib
@@ -98,7 +123,7 @@ The workshop again started with presentations to introduce ELIXIR, the ELIXIR To
 | Kryštof Komanec | DSW TDK Creating a new template |
 | Christian Bonatto Minella | FAIRsharing and the ELIXIR Toxicology Community [@BonattoMinella2025] |
 
-## Sessions
+## Day 1
 
 The first session was on FAIR Cookbook, opened by a presenation by 
 Vassilios Ioannidis, which also were looked  into during the first workshop.
@@ -125,13 +150,37 @@ Postgraduate Education in Toxicology (https://toxcourses.nl/).
 
 ![An interactive survey provided a friendly entrance to listing existing training materials](tox_training_materials.png)
 
-Second day, session on FAIR models ...
+## Day 2
 
-Next session on the DS-Wizard and the need for templates: https://ds-wizard.org/document-templates https://en.wikipedia.org/wiki/Jinja  What needs to be done by the Tox community is to create a knowledge model for the different 4 scientific models, QSAR, AOPs Wiki-pathways, ..
-Action: organize a longer session. 
+The second day started with a short session on FAIR models, with two introduction
+lectures by Marvin Martens and one by Egon Willighagen [@willighagen_QSAR]. During
+the discussion various scientific models were identified, like QSAR models,
+adverse outcome pathways (AOPs), and biological pathway models like in WikiPathways.
+For the first, the QSAR DataBank (https://qsardb.org/) exists.
 
-## Advancing FAIR Toxicology Data across Europe: ELIXIR & FAIRsharing
+The next session, led by Kryštof Komanec, was about the DS-Wizard and the need for templates specific for
+toxicology. The idea here is that targeted templates remove more less specific questions,
+improving the sense of purpose. DS-Wizard has a mechnism for document templates
+(https://ds-wizard.org/document-templates) based on Jinja2 (https://en.wikipedia.org/wiki/Jinja).
+The idea arises that the ELIXIR Toxicology Community creates a knowledge model for the
+different scientific models, based on which the templates can be created.
+This needs a longer session and the idea of an BioHackathon Europe project proposal
+is mentioned. One of the advantages is that filled out templates can be exported
+in various output formats, including LaTex, DOCX, PDF, and RDF.
 
+After a break, a hands-on session is held, showing the technical steps to setup
+a Python environment for template development. For example, on Debian GNU/Linux
+the following commands would be used:
+
+```
+mkdir dsw; cd dsw
+python3 -m venv dsw-venv
+source dsw-venv/bin/activate
+pip install dsw-tdk
+dsw-tdk –-help
+```
+
+The final session was about FAIRsharing.
 FAIRsharing is an informative and educational resource that connects data policies, repositories, and community standards. It offers curated, community-validated collections, branded pages that highlight selected standards and repositories recommended by experts. The ELIXIR Toxicology Community is advancing the adoption of FAIR principles in toxicology, ensuring that research outputs are Findable, Accessible, Interoperable, and Reusable [@Wilkinson2016].
 
 As part of the FAIRsharing Community Champions Programme, domain experts from RDA, the EOSC clusters, and the international research community curate relevant content, contribute to educational materials, and receive formal attribution through ORCID. Within the ELIXIR Interoperability Platform (2024 - 2028), FAIRsharing is implementing new actions that will support key deliverables, expanding the landscape of standards, repositories, and policies within ELIXIR (D2.4), and establishing an ELIXIR Community Champion (D4.3). Christian Bonatto Minella has fulfilled this role for toxicology since the beginning of 2024 and presented recent achievements during the INTOXICOM Workshop 2 in Basel [@BonattoMinella2025], gathering community feedback on the progress to date.
@@ -148,8 +197,17 @@ By aligning toxicology-specific needs with ELIXIR’s broader infrastructure, th
 
 The impact of these efforts is expected to be substantial, with standardised, well-annotated, FAIR-compliant datasets, researchers will be better equipped to integrate and reuse data, advance predictive toxicology, reduce redundant experimentation, and strengthen evidence for regulatory assessments. Ultimately, this work lays the foundation for a connected, interoperable toxicology landscape that improves scientific efficiency, regulatory decision-making, and public health outcomes.
 
+# Conclusion
+
+The workshop created many new ideas and plans. Some of the resuls were completed
+sometime after the workshop, like the full FAIRsharing report on the toxicology
+collection [@bonatto_minella_15799783]. Online coverage included a Health-RI
+news item (https://www.health-ri.nl/en/news/advancing-fair-data-toxicology-elixir-nl-contributes-key-workshops).
+
 ## Funding
 
-This workshop was funded by the ELIXIR Europe INTOXICOM grant (Grant No. NL-2023-INTOXICOM).
+This workshop was funded by the ELIXIR Europe INTOXICOM grant (Grant No. NL-2023-INTOXICOM). Participants were further funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under the National Research Data Infrastructure – NFDI4/1 – Project number 441958208 (NFDI4Chem). Author thanks the RECETOX Research Infrastructure (No LM2023069) financed by the Ministry of Education, Youth and Sports for supportive background. 
+
+Part of the work within this publication was performed with support of the European Partnership for the Assessment of Risks from Chemicals, as part of WP7 FAIR data activities. The European Partnership for the Assessment of Risks from Chemicals (PARC) has received funding from the European Union’s Horizon Europe research and innovation program under Grant Agreement No 101057014 and has received co-funding from the authors’ institutions. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union, their affiliations or the Health and Digital Executive Agency. Neither the European Union nor the granting authority can be held responsible for them. 
 
 ## References
