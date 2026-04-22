@@ -32,8 +32,11 @@ authors:
   - name: Iseult&nbsp;Lynch
     affiliation: 9
     orcid: 0000-0003-4250-4584
-  - name: Rob&nbsp;Stierum
+  - name: Uko&nbsp;Maran
     affiliation: 10
+    orcid: 0000-0003-2506-0934
+  - name: Rob&nbsp;Stierum
+    affiliation: 11
     orcid: 0000-0002-4409-1974
   - name: Marvin&nbsp;Martens
     affiliation: 7
@@ -68,8 +71,11 @@ affiliations:
   - name: University of Birmingham, Birmingham, UK
     index: 9
     ror: 03angcq70
-  - name: The Netherlands Organisation for Applied Scientific Research (TNO), Utrecht, NL
+  - name: Institute of Chemistry, University of Tartu, Tartu, ET
     index: 10
+    ror: 03z77qz90
+  - name: The Netherlands Organisation for Applied Scientific Research (TNO), Utrecht, NL
+    index: 11
     ror: 03angcq70
 date: 1 December 2024
 cito-bibliography: paper.bib
@@ -220,8 +226,9 @@ Finally, participants stressed the importance of strengthening incentives by rec
 
 The second day started with a short session on FAIR models, with two introduction
 lectures by Marvin Martens and one by Egon Willighagen [@willighagen_QSAR]. During
-the discussion various scientific models were identified, like QSAR models,
-adverse outcome pathways (AOPs), and biological pathway models like in WikiPathways.
+the discussion various scientific models were identified, like QSAR
+models [@Belfield2025; @Cronin2025], adverse outcome pathways (AOPs) [@Wittwehr2024],
+and biological pathway models like in WikiPathways.
 For the first, the QSAR DataBank (https://qsardb.org/) exists.
 
 The next session, led by Kryštof Komanec, was about the DS-Wizard and the need for templates specific for
