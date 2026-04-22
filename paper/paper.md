@@ -117,7 +117,7 @@ The workshop again started with presentations to introduce ELIXIR, the ELIXIR To
 | --- | -------- |
 | Egon Willighagen | ELIXIR Introduction & ELIXIR Toxicology Community |
 | Vassilios Ioannidis | The FAIR Cookbook - How to Contribute |
-| Sara Morsy | How to make toxicology training materials FAIR |
+| Sara Morsy | [How to make toxicology training materials FAIR](https://zenodo.org/records/19675641)|
 | Marvin Martens | FAIRification of Scientific Models: Adverse Outcome Pathways |
 | Egon Willighagen | Making QSAR models FAIR [@willighagen_QSAR] |
 | Kryštof Komanec | DSW TDK Creating a new template |
@@ -132,23 +132,89 @@ was written with HackMD (https://hackmd.io/@lusinke/rkXlvLXE0), describing how a
 can be annotated with the BioAssay Ontology.
 
 During the afternoon sessions, we focused on making training material more
-FAIR, specifically with BioSchemas. Sara Morsy introduced the topic in a
+FAIR, specifically with BioSchemas. The workshop also laid the groundwork for WS5 in Birmingham. Sara Morsy introduced the topic in a
 welcoming style with a presentation with interactive survey (see Figure 1).
-Among other things, this introduced a minimal metadata standard developed
-by the Research Data Aliance [@Hoebelheinrich2022].
+This started the discussion on how to apply FAIR Principles for toxicology training materials. The workshop provided tips on how to FAIRify these training materials through going through ten simple rules for make training materials FAIR [@Garcia2020] with specific focus on metadata, Applying Bioschemia training profiles, persistent identifiers, TeSS registration and Learning paths tailored to the toxicology training materials. 
 
-The hands-on sections first focused on listing existing materials, followed
-by a session where we looked which materials allowed adding Bioschemas.
-Existing training material came from projects like eNanoMapper and NanoCommons:
+![An interactive survey provided a friendly entrance to listing existing training materials](tox_training_materials.png)
+
+### Minimum metadata descriptors for training materials
+The session introduced a minimal metadata standard developed by the Research Data Aliance [@Hoebelheinrich2022] and criteria for persistent identifiers for training materials. The activity then progressed to focus on discussing what would be the minimal metadata standards to describe toxicology training materials. The participants were split into three groups for this activity. Based on the discussion, we realised that these minimum metadata descriptors are not always sufficient. While minimal metadata supports basic discoverability, domain-specific metadata significantly enhances reuse and interoperability. The following were recommended as additional metadata for toxicology training materials:
+| Category                         | Metadata Element                 | Description / Examples                                                                 |
+|----------------------------------|----------------------------------|----------------------------------------------------------------------------------------|
+| Pedagogical Context              | Required expertise level         | Beginner, intermediate, advanced                                                       |
+|                                  | Delivery mode                    | Stand-alone or instructor-led                                                          |
+|                                  | Duration                         | Length of the training (e.g., 2 hours, 1 week course)                                  |
+|                                  | Certification                    | Formal recognition (e.g., EUROTOX courses)                                             |
+| Domain-Specific Metadata         | Regulatory domain                | REACH, pharmaceuticals, cosmetics, food safety                                         |
+| (Toxicology subdomains)          | Area of toxicology               | Human toxicology, ecotoxicology, One Health                                            |
+|                                  | Method type                      | In vivo, in vitro, in silico                                                           |
+|                                  | Position in risk assessment      | Stage within risk assessment pipeline                                                  |
+|                                  | Application domains              | Academia, regulatory agencies, industry                                                |
+|                                  | Methodological classification    | Type of scientific/analytical approach                                                 |
+|                                  | Risk analysis stage              | Research → assessment → management → communication                                     |
+| Technical and Structural Metadata| Dependencies / prerequisites     | Required prior knowledge, tools, or datasets                                           |
+|                                  | Funding source                   | Project or funding body                                                                |
+|                                  | Interoperability links           | Links to registries such as :contentReference[oaicite:0]{index=0}                      |
+
+One of the groups added the following picture to show different levels of biological integration to illustrate the granularity of toxicology and how metadata should reflect these levels
+![Toxicology scope and subdomains that should be captured in the metadata](tox_metadata.png)
+
+### Training profile Bioschema activity
+The participant continued working with their groups and explored how to add Bioschemas markup to existing training materials. Participants worked on embedding structured metadata into Markdown-based materials to improve machine readability, indexing in registries like TeSS, search engine discoverability. This exercise sparked discussion on technical aspects of FAIR and how experimental toxicologists may struggle. As a result, The participants discussed the potential use of large language models (LLMs) to generate metadata descriptions, convert narrative content into structured markdown and assist with FAIR compliance. The discussions further covered registration of training material in ELIXIR TeSS, 
+and the existence of national toxicology curicula, like the Dutch Postgraduate Education in Toxicology (https://toxcourses.nl/).
+
+Existing training material came from projects like eNanoMapper and NanoCommons which was successfully minted with training profile Bioschema:
 
 * [NanoCommons User Guidance Handbook](https://nanocommons.github.io/user-handbook/) [@Brajnik2022]
 * [Browsing the eNanoMapper ontology with BioPortal, AberOWL and Protégé](https://enanomapper.github.io/tutorials/BrowseOntology/Tutorial%20browsing%20eNM%20ontology.html)
 
-The discussions further covered registration of training material in ELIXIR TeSS,
-and the existence of national toxicology curicula, like the Dutch
-Postgraduate Education in Toxicology (https://toxcourses.nl/).
+### Learning Paths Activity
 
-![An interactive survey provided a friendly entrance to listing existing training materials](tox_training_materials.png)
+The third activity introduced participants to the concept of **learning paths** and their role in supporting FAIR principles. Participants engaged in an interactive *“roll the dice”* exercise, where they used training materials available on TeSS to construct coherent learning paths. This activity served a dual purpose. First, it familiarized participants with the structure and value of learning paths as a way to organize and contextualize training materials. Second, it encouraged active exploration of toxicology-related resources within TeSS, enabling participants to identify gaps, overlaps, and domain-specific challenges in the current training landscape. The participants used Miro to work together on exploring TeSS and build learning paths
+
+![Basic learning path for learners who wants to learn toxicology databases](tox_learning_path.png)
+
+### Final Activity: Reflecting on FAIR Challenges and Solutions
+
+The final activity focused on identifying the challenges associated with applying FAIR principles to training materials. It provided participants with an opportunity to reflect on the concepts introduced throughout the workshop and to critically assess practical barriers within their own contexts.
+
+### Challenges Identified
+
+**Metadata complexity**  
+Participants highlighted that metadata requirements remain inconsistent, with no clear agreement on what constitutes a sufficient set of descriptors. This creates a tension between keeping metadata simple and ensuring it is rich enough to support interoperability and reuse. Additionally, implementing standards such as Bioschemas introduces further complexity, as annotation requires specific knowledge and training.
+
+**Retrofitting legacy materials**  
+Many existing training resources were not originally developed with FAIR principles in mind and therefore lack structured metadata. Updating these materials is both time-consuming and resource-intensive, requiring technical and domain expertise. This challenge is compounded by limited teaching time, which restricts the ability to revise or redesign content.
+
+**Domain fragmentation and system constraints**  
+Toxicology covers a wide range of regulatory frameworks and scientific disciplines, making standardization inherently difficult. Furthermore, training materials are often developed within existing learning management systems, such as Canvas, which may not readily support FAIR practices. Within these constraints, it is not always clear how materials can be effectively improved.
+
+**Incentives and cultural barriers**  
+Participants noted that there is limited recognition for the development of high-quality training materials, leading researchers to prioritize traditional academic outputs. Training resources are also not consistently framed as supporting key processes such as risk assessment, where transparency and openness are critical. The lack of clear incentives, including financial drivers, further reduces motivation to adopt FAIR practices.
+
+**Usability of tools**  
+Many research data management tools were perceived as complex and sometimes error-prone. This lack of usability discourages adoption, as FAIR workflows can become burdensome rather than supportive if they are not intuitive and efficient.
+
+### Proposed Solutions
+
+**Aliging with toxicology community standards**  
+Participants emphasized the need for community-agreed metadata profiles that strike a balance between usability and the level of detail required for interoperability and reuse.
+
+**Automation**  
+The use of automation, including large language model (LLM)-assisted annotation, was identified as a promising approach to reduce the time and effort required to FAIRify training materials.
+
+**Integration with existing infrastructures**  
+Improved alignment with platforms such as TeSS and FAIRsharing was recommended to enhance discoverability and reuse. At the same time, better integration with commonly used teaching systems is necessary.
+
+**Clear guidance and templates**  
+Providing clear guidelines and reusable templates, such as Markdown combined with Bioschemas annotations, would help lower the barrier to adoption and support more consistent implementation.
+
+**Demonstrating impact**  
+Showcasing the practical benefits of FAIR training materials—particularly their role in improving transparency and supporting risk assessment—was seen as essential for increasing engagement.
+
+**Incentives**  
+Finally, participants stressed the importance of strengthening incentives by recognizing training materials as scholarly outputs, allocating dedicated time for their development, and aligning FAIR practices with funding and institutional priorities.
 
 ## Day 2
 
