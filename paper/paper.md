@@ -39,7 +39,7 @@ authors:
     affiliation: 7
     orcid: 0000-0003-2230-0840
   - name: Sara&nbsp;Morsy
-    affiliate: 12
+    affiliation: 12
     orcid: 0000-0002-2477-1139
   - name: Egon&nbsp;Willighagen
     affiliation: 7
@@ -76,6 +76,7 @@ affiliations:
     ror: 03angcq70
   - name: Faculty of Life Sciences, University of Bradford, Bradford, UK
     index: 12
+    ror: 03angcq70
 -
 date: 1 December 2024
 cito-bibliography: paper.bib
